@@ -1,0 +1,6 @@
+{
+  "parent": "vapesgalore:block/plastic_block",
+  "textures": {
+    "all": "vapesgalore:block/plastic_block"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "vapesgalore:plastic"
+    }
+  },
+  "result": {
+    "item": "vapesgalore:plastic_block"
+  }
+}

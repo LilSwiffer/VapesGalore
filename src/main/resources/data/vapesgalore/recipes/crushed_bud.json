@@ -1,0 +1,11 @@
+{
+  "type": "tutorialmod:bud_crushing",
+  "ingredients": [
+    {
+      "item": "vapes_galore:bud"
+    }
+  ],
+  "output": {
+    "item": "vapesgalore:crushed_bud"
+  }
+}

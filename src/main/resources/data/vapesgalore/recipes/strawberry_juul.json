@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P",
+    "S"
+  ],
+  "key": {
+    "P": {
+      "item": "vapesgalore:strawberry_pod"
+    },
+    "S": {
+      "item": "vapesgalore:juul_battery"
+    }
+  },
+  "result": {
+    "item": "vapesgalore:strawberry_juul"
+  }
+}

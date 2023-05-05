@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "vapesgalore:block/weed_stage4"
+  }
+}

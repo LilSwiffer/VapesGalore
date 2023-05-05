@@ -1,0 +1,28 @@
+{
+  "item.vapesgalore.juul_battery": "JUUL Battery",
+  "item.vapesgalore.plastic": "Plastic",
+  "item.vapesgalore.coil": "Coil",
+  "item.vapesgalore.battery": "Battery",
+  "item.vapesgalore.strawberry_pod": "Strawberry Pod",
+  "item.vapesgalore.banana_pod": "Banana Pod",
+  "item.vapesgalore.lime_pod": "Lime Pod",
+  "item.vapesgalore.bubblegum_pod": "Bubblegum Pod",
+  "item.vapesgalore.blueberry_pod": "Blueberry Pod",
+  "item.vapesgalore.blueberry_juul": "Blueberry Juul",
+  "item.vapesgalore.strawberry_juul": "Strawberry Juul",
+  "item.vapesgalore.lime_juul": "Lime Juul",
+  "item.vapesgalore.bubblegum_juul": "Bubblegum Juul",
+  "item.vapesgalore.banana_juul": "Banana Juul",
+  "item.vapesgalore.bud": "Bud",
+  "item.vapesgalore.crushed_bud": "Crushed Bud",
+  "item.vapesgalore.vape_juice_bucket": "Bucket of Vape Juice",
+  "item.vapesgalore.weed_seeds": "Weed Seeds",
+
+  "block.vapesgalore.plastic_block": "Plastic Block",
+  "block.vapesgalore.weed_plant": "Weed Plant",
+  "block.vapesgalore.small_marijuana_plant": "Small Weed Plant",
+  "block.vapesgalore.weed_grinder": "Weed Grinder",
+
+
+  "itemGroup.vapesgalore": "Vapes Galore"
+}

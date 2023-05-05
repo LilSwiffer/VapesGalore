@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "#c#",
+    "#b#"
+  ],
+  "key": {
+    "c": {
+      "item": "vapesgalore:coil"
+    },
+    "b": {
+      "item": "vapesgalore:battery"
+    },
+    "#": {
+      "item": "vapesgalore:plastic"
+    }
+  },
+  "result": {
+    "item": "vapesgalore:juul_battery"
+  }
+}

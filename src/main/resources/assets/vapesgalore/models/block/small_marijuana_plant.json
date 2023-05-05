@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "vapesgalore:block/small_marijuana_plant"
+  }
+}

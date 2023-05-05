@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#d#",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "vapesgalore:plastic"
+    },
+    "X": {
+      "item": "vapesgalore:vape_juice_bucket"
+    },
+    "d": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "result": {
+    "item": "vapesgalore:blueberry_pod"
+  }
+}
