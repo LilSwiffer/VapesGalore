@@ -1,12 +1,13 @@
 package com.lil_roomba.vapesgalore.block.entity.custom;
 
 import com.lil_roomba.vapesgalore.block.entity.ModBlockEntities;
+import com.lil_roomba.vapesgalore.item.ModItems;
 import com.lil_roomba.vapesgalore.recipe.WeedGrinderRecipe;
 import com.lil_roomba.vapesgalore.screen.WeedGrinderMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Component;;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
@@ -148,23 +149,22 @@ public class WeedGrinderBlockEntity extends BlockEntity implements MenuProvider 
         Optional<WeedGrinderRecipe> match = level.getRecipeManager()
                 .getRecipeFor(WeedGrinderRecipe.Type.INSTANCE, inventory, level);
 
-        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem());
+        return (entity.itemHandler.getStackInSlot(0).getItem() == ModItems.BUD.get()) && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, new ItemStack(ModItems.CRUSHED_BUD.get()));
     }
 
     private static void craftItem(WeedGrinderBlockEntity entity) {
         Level level = entity.level;
+
+        // the contents of the slots
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<WeedGrinderRecipe> match = level.getRecipeManager()
-                .getRecipeFor(WeedGrinderRecipe.Type.INSTANCE, inventory, level);
-
-        if(match.isPresent()) {
+        // if bud in first slot
+        if(entity.itemHandler.getStackInSlot(0).getItem() == ModItems.BUD.get()) {
             entity.itemHandler.extractItem(0,1, false);
-            entity.itemHandler.setStackInSlot(1, new ItemStack(match.get().getResultItem().getItem(),
+            entity.itemHandler.setStackInSlot(1, new ItemStack(ModItems.CRUSHED_BUD.get(),
                     entity.itemHandler.getStackInSlot(1).getCount() + 1));
 
             entity.resetProgress();
@@ -175,10 +175,12 @@ public class WeedGrinderBlockEntity extends BlockEntity implements MenuProvider 
         this.progress = 0;
     }
 
+    // if output has the same item or is empty
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack output) {
         return inventory.getItem(1).getItem() == output.getItem() || inventory.getItem(1).isEmpty();
     }
 
+    // if output not full
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
         return inventory.getItem(1).getMaxStackSize() > inventory.getItem(1).getCount();
     }
